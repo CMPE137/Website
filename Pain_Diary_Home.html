@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>htmlDatePicker Test Page (HTML)</title>
+	<script src="htmlDatePicker.js" type="text/javascript"></script>
+	<link href="htmlDatePicker.css" rel="stylesheet">
+</head>
+
+<body>
+
+<p id = "debug">
+
+</p>
+
+<center>
+<h1>Pain Diary</h1>
+<br><br>
+<form method="post">
+
+Where does it hurt?
+<br><br>
+<img src = "body.png" height = "200" id = "bodyimg"><br>
+<select id = "body_part">
+   <option value="Head" onclick="setHead()">Head</option>
+   <option value="Shoulders" onclick="setShoulders()">Shoulders</option>
+   <option value="Knees" onclick="setKnees()">Knees</option>
+   <option value="Toes" onclick="setToes()">Toes</option>
+</select> 
+<br><br>
+How much does it hurt?
+<br><br>
+Doesn't Hurt  <input type = "range" value = "0" id = "pain_range">   Very Much
+<br><br>
+How long has it hurt?
+<br><br>
+<select>
+   <option value="1hr">< 1 Hour</option>
+   <option value="Shoulders">1-2 Hours</option>
+   <option value="Knees">3-4 Hours</option>
+   <option value="Toes">4 Hours +</option>
+</select>
+
+<br>
+<br><br>
+<br>
+What day was this?
+<br>
+<br><br>
+<br>
+	Please select a date: 
+	<script type="text/javascript"><!--
+		var today = new Date();
+		
+		DisablePast = false;
+		range_start = new Date(today.getFullYear(),today.getMonth(),8);
+		range_end = new Date(today.getFullYear(),today.getMonth(),5);
+	--></script>
+	<input type="text" placeholder="Click me!" name="SelectedDate" id="SelectedDate" readonly onClick="GetDate(this);">
+<br>
+<br>
+<br>
+	<input type="submit">
+
+</form>
+
+<script>
+
+var body_part = "Head"
+setInterval("update()",1)
+
+function update()
+{
+document.getElementById("debug").innerHTML = document.getElementById("pain_range").value
+if (body_part == "Head")
+setHead()
+if (body_part == "Shoulders")
+setShoulders()
+if (body_part == "Knees")
+setKnees()
+if (body_part == "Toes")
+setToes()
+
+}
+function setHead()
+{
+document.getElementById("bodyimg").src = "body_head.png"
+if (document.getElementById("pain_range").value > 40)
+document.getElementById("bodyimg").src = "body_head2.png"
+if (document.getElementById("pain_range").value > 70)
+document.getElementById("bodyimg").src = "body_head3.png"
+
+body_part = "Head"
+}
+function setShoulders()
+{
+document.getElementById("bodyimg").src = "body_shoulders.png"
+if (document.getElementById("pain_range").value > 40)
+document.getElementById("bodyimg").src = "body_shoulders2.png"
+if (document.getElementById("pain_range").value > 70)
+document.getElementById("bodyimg").src = "body_shoulders3.png"
+
+body_part = "Shoulders"
+}
+function setKnees()
+{
+document.getElementById("bodyimg").src = "body_knees.png"
+if (document.getElementById("pain_range").value > 40)
+document.getElementById("bodyimg").src = "body_knees2.png"
+if (document.getElementById("pain_range").value > 70)
+document.getElementById("bodyimg").src = "body_knees3.png"
+
+body_part = "Knees"
+}
+function setToes()
+{
+document.getElementById("bodyimg").src = "body_toes.png"
+if (document.getElementById("pain_range").value > 40)
+document.getElementById("bodyimg").src = "body_toes2.png"
+if (document.getElementById("pain_range").value > 70)
+document.getElementById("bodyimg").src = "body_toes3.png"
+
+body_part = "Toes"
+}
+</script>
+</body>
+</center>
+
+</html>
