@@ -33,3 +33,41 @@ xsp4
 Listening on address: 0.0.0.0
 Root directory: /var/www/mono
 Listening on port: 8080 (non-secure)
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Address already in use
+  at System.Net.Sockets.Socket.Bind (System.Net.EndPoint local_end) [0x00000] in <filename unknown>:0 
+  at Mono.WebServer.XSPWebSource.CreateSocket () [0x00000] in <filename unknown>:0 
+  at Mono.WebServer.ApplicationServer.Start (Boolean bgThread, Int32 backlog) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) Mono.WebServer.ApplicationServer:Start (bool,int)
+  at Mono.WebServer.XSP.Server.DebugMain (System.String[] args, Boolean root, IApplicationHost ext_apphost, Boolean quiet) [0x00000] in <filename unknown>:0 
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Address already in use
+  at System.Net.Sockets.Socket.Bind (System.Net.EndPoint local_end) [0x00000] in <filename unknown>:0 
+  at Mono.WebServer.XSPWebSource.CreateSocket () [0x00000] in <filename unknown>:0 
+  at Mono.WebServer.ApplicationServer.Start (Boolean bgThread, Int32 backlog) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) Mono.WebServer.ApplicationServer:Start (bool,int)
+  at Mono.WebServer.XSP.Server.DebugMain (System.String[] args, Boolean root, IApplicationHost ext_apphost, Boolean quiet) [0x00000] in <filename unknown>:0 
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Listening on port: 8080 (non-secure)
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Listening on port: 8080 (non-secure)
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Listening on port: 8080 (non-secure)
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Listening on port: 8080 (non-secure)
+xsp4
+Listening on address: 0.0.0.0
+Root directory: /var/www/mono
+Listening on port: 8080 (non-secure)

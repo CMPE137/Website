@@ -42,13 +42,33 @@
               </tr>
               <tr>
                 <th width = "20%">Gender</th>
-                <td><input type="text" class="form-control" id="inputGender" placeholder="Enter email" runat = "server"></td>
+                <td>
+                    <select class = "form-control" id ="inputGender" runat = "server">
+                      <option value = "male">Male</option>
+                      <option value = "female">Female</option>
+                    </select>
+                </td>
               </tr>
             </table>
-            <asp:button type="submit" class="btn btn-primary" runat = "server" id = "registerButton" onClick = "registerClick" text = "Register!" /> 
+            <asp:button type="submit" class="btn btn-primary" runat = "server" id = "registerButton" onClick = "registerClick" text = "Register" /> 
           </form> 
         </div>
       </div>
+     <asp:panel>
+      <div class = "row" id = "errorMsgMailInUse" runat = "server" visible = false>
+        <center>Email already in use!</center>
+      </div>
+     </asp:panel>
+     <asp:panel>
+      <div class = "row" id = "errorMsgIncompleteForm" runat = "server" visible = false>
+        <center>Please fill out the entire form!</center>
+      </div>
+     </asp:panel>
+     <asp:panel>
+      <div class = "row" id = "successMsg" runat = "server" visible = false>
+        <center>Thank you for registering your Pain Diary!</center>
+      </div>
+     </asp:panel>
     </div>
   </body>
 </html>
