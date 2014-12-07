@@ -17,5 +17,29 @@ public partial class _Default : Page
         return;
       }
     }
+
+    protected void submitClick(object sender, EventArgs e) {
+       errorMsgIncompleteForm.Visible = false;
+
+       string connectionString = "Server=localhost;Database=paindiaries;User ID=root;Password=paindiaries;Pooling=false;";
+       MySqlConnection dbcon = new MySqlConnection(connectionString);
+       dbcon.Open();
+
+       if (body_part.Value == "" || durationInput.Value == "" || inputDate.Value == "") {
+       		errorMsgIncompleteForm.Visible = true;
+          	dbcon.Close();
+          	dbcon = null; 
+          	return;
+       } 
+
+       int value;
+       Int32.TryParse(painInput.Value, out value);
+       MySqlCommand command = dbcon.CreateCommand();
+       command.CommandText = "INSERT INTO `paindiaries`.`entries` (`owner`, `intensity`, `area`, `date`, `duration`) VALUES ('" + Session["userId"] + "', '" + value + "', '" + body_part.Value + "', '" + inputDate.Value + "', '" + durationInput.Value + "');";
+       command.ExecuteNonQuery();
+
+       dbcon.Close();
+       dbcon = null; 
+    }
     
 }

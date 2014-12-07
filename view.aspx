@@ -26,12 +26,9 @@
           </div>
         </nav>
       <div class = "row">
-        <div class = "col-md-5 col-md-offset-2 col-xs-12">
+        <div class = "col-md-8 col-md-offset-2 col-xs-12">
           <h1>Your Diary</h1>
-
-
-
-
+          <asp:DataGrid runat="server" id="UsersControl" class = "table table-bordered"/>
         </div>
       </div>
     </div>
