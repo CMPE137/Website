@@ -28,6 +28,11 @@
       <div class = "row">
         <div class = "col-md-8 col-md-offset-2 col-xs-12">
           <h1>Your Diary</h1>
+          <asp:panel>
+         	<div style="margin-bottom:20px;" class = "row" id = "deleteMsg" runat = "server" visible = false>
+          		<center>Entry has been successfully deleted.</center>
+          	</div>
+		  </asp:panel>
           <asp:DataGrid runat="server" id="UsersControl" class = "table table-bordered"/>
         </div>
       </div>

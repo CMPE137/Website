@@ -66,7 +66,7 @@
      </asp:panel>
      <asp:panel>
       <div class = "row" id = "successMsg" runat = "server" visible = false>
-        <center>Thank you for registering your Pain Diary!</center>
+        <center>Thank you for registering your Pain Diary! <a href = "login.aspx">Login here</a></center>
       </div>
      </asp:panel>
     </div>

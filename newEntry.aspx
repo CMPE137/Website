@@ -33,7 +33,7 @@
           <table class="table table-condensed" width = "100%">
             <tbody>
               <tr>
-                <td><h4>Where does it hurt?</h4></td>
+                <td width="400px;"><h4>Where does it hurt?</h4></td>
                   <td>
                     <center><img src = "body.png" height = "200" id = "bodyimg"></center><br><br>
                       <select id = "body_part" runat = "server" onchange=change(this.value) class = "form-control">
@@ -47,7 +47,7 @@
               <tr>
                 <td><h4>How much does it hurt?</h4></td>
                 <td>
-                  Doesn't Hurt<input type = "range" value = "0" id = "pain_range" class = "form-control" width = "50%">Very Much 
+                  <img style="float:left; margin-right:5px;" width="32px" src="happy.png"/><input style="width:285px; float:left;" type = "range" value = "0" id = "pain_range" class = "form-control"><img style="float:left; margin-left:5px;" width="32px" src="sad.png"/>
                   <asp:HiddenField ID="painInput" runat="server" />
                 </td>
               </tr>
@@ -55,10 +55,10 @@
                 <td><h4>How long has it hurt?</h4></td>
                 <td>
                   <select class = "form-control" runat = "server" id ="durationInput">
-                 <option value="1hr"> 1 Hour</option>
-                 <option value="1-2hrs">1-2 Hours</option>
-                 <option value="3-4hrs">3-4 Hours</option>
-                 <option value="4+hrs">4 Hours +</option>
+                 <option value="< 1 Hour">< 1 Hour</option>
+                 <option value="1-2 Hours">1-2 Hours</option>
+                 <option value="3-4 Hours">3-4 Hours</option>
+                 <option value="4+ Hours">4 Hours +</option>
               </select>
                 </td>
               </tr>
@@ -106,9 +106,9 @@ function change(bodypart) {
 function setHead()
 {
 document.getElementById("bodyimg").src = "body_head.png"
-if (document.getElementById("pain_range").value > 40)
+if (document.getElementById("pain_range").value > 33)
 document.getElementById("bodyimg").src = "body_head2.png"
-if (document.getElementById("pain_range").value > 70)
+if (document.getElementById("pain_range").value > 66)
 document.getElementById("bodyimg").src = "body_head3.png"
 
 body_part = "Head"
@@ -116,9 +116,9 @@ body_part = "Head"
 function setShoulders()
 {
 document.getElementById("bodyimg").src = "body_shoulders.png"
-if (document.getElementById("pain_range").value > 40)
+if (document.getElementById("pain_range").value > 33)
 document.getElementById("bodyimg").src = "body_shoulders2.png"
-if (document.getElementById("pain_range").value > 70)
+if (document.getElementById("pain_range").value > 66)
 document.getElementById("bodyimg").src = "body_shoulders3.png"
 
 body_part = "Shoulders"
@@ -126,9 +126,9 @@ body_part = "Shoulders"
 function setKnees()
 {
 document.getElementById("bodyimg").src = "body_knees.png"
-if (document.getElementById("pain_range").value > 40)
+if (document.getElementById("pain_range").value > 33)
 document.getElementById("bodyimg").src = "body_knees2.png"
-if (document.getElementById("pain_range").value > 70)
+if (document.getElementById("pain_range").value > 66)
 document.getElementById("bodyimg").src = "body_knees3.png"
 
 body_part = "Knees"
@@ -136,9 +136,9 @@ body_part = "Knees"
 function setToes()
 {
 document.getElementById("bodyimg").src = "body_toes.png"
-if (document.getElementById("pain_range").value > 40)
+if (document.getElementById("pain_range").value > 33)
 document.getElementById("bodyimg").src = "body_toes2.png"
-if (document.getElementById("pain_range").value > 70)
+if (document.getElementById("pain_range").value > 66)
 document.getElementById("bodyimg").src = "body_toes3.png"
 
 body_part = "Toes"

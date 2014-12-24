@@ -40,6 +40,9 @@ public partial class _Default : Page
 
        dbcon.Close();
        dbcon = null; 
+	   
+	   Server.Transfer("view.aspx");
+	   
     }
     
 }
